@@ -17,3 +17,46 @@ For the `animals` the client wants to record:
 
 Determine the database tables necessary to track this information.
 Label any relationships between table.
+
+## A good datat model
+
+- captures ALL the information the system needs.
+- captures ONLY the information the system needs.
+- reflect reality (from the point of view of the system).
+- is flexiblem, can evolve with the system.
+- guarantees `data integrity`, without sacrificing too much performance.
+- is driven by the way we access data.
+
+## Components
+
+- entities (nouns: zoo, animal, species), like a resource --> tables.
+- properties --> columns, fields.
+- relationships --> Foreign Keys (FK).
+
+## Workflow
+
+- identify entities (real and transactional).
+- identify relationships.
+- identify properties.
+
+## Releationships
+
+- one to one
+- one to many: this is the most common!
+- many to many: this is smoke and mirrors.
+
+_there are many animals in one species_.
+
+_there can be more than one animal in a zoo_.
+
+_an animal could have lived in more thatn one zoo_.
+
+## Mantras
+
+- every table must have a **Primary Key**.
+- work on **two or three** entities at a time.
+- **one to many** relationships are modeled using a **Foreign Key**.
+- the **Foreigh Key** always goes in the **many** side.
+- the **Foreign Key Column** must be the same type as the **Primary Key** it references.
+- **many to many** relationships are modeled using a **third table**.
+- the third table could include other columns.
